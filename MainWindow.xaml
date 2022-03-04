@@ -1,0 +1,23 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="tbxNumber1" Text="" TextWrapping="Wrap" Margin="67,207,582,176"/>
+        <TextBox x:Name="tbxNumber2" Text="" TextWrapping="Wrap" Margin="357,207,292,176"/>
+        <Label Content="Calculator" Margin="262,43,307,246" FontSize="25" FontFamily="Showcard Gothic" FontStyle="Normal" FontWeight="Normal"/>
+        <Label x:Name="TextBox_1" Content="Number 1" Margin="84,168,599,232" FontWeight="Bold" FontSize="20"/>
+        <Label x:Name="TextBox_2" Content="Number 2" Margin="374,161,309,239" FontWeight="Bold" FontSize="20"/>
+        <TextBox x:Name="tbxResult" Text="" TextWrapping="Wrap" Margin="620,207,29,176" IsReadOnly="True"/>
+        <Label x:Name="TextBox_2_Copy" Content="Result" Margin="637,158,46,242" FontWeight="Bold" FontSize="20"/>
+        <RadioButton x:Name="radioPlus" Content="Plus" HorizontalAlignment="Left" Margin="242,0,0,0" VerticalAlignment="Center" Height="21" Width="105" FontSize="20" FontWeight="Bold" Checked="RadioPlus_CheckedChanged"/>
+        <RadioButton x:Name="radioMinus" Content="Minus" HorizontalAlignment="Left" Margin="242,233,0,0" VerticalAlignment="Top" Height="25" Width="105" FontSize="20" FontWeight="Bold" Checked="RadioMinus_Checked"/>
+        <Button x:Name="btnCalculate" Content="=" HorizontalAlignment="Left" Height="51" Margin="532,207,0,0" VerticalAlignment="Top" Width="68" Click="BtnCalculate_Click" FontSize="35" FontWeight="Bold"/>
+        <Button x:Name="btnResult" Content="Clear Result" HorizontalAlignment="Left" Height="51" Margin="310,314,0,0" VerticalAlignment="Top" Width="166" FontSize="25" FontWeight="Bold" Click="BtnResult_Click"/>
+
+    </Grid>
+</Window>
