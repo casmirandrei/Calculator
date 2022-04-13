@@ -35,6 +35,8 @@ namespace Calculator
 
         private void BtnCalculate_Click(object sender, RoutedEventArgs e)
         {
+           
+
             bool number1Ok = double.TryParse(tbxNumber1.Text, out number1);
             bool number2Ok = double.TryParse(tbxNumber2.Text, out number2);
 
@@ -53,7 +55,19 @@ namespace Calculator
                             result = number1 - number2;
                         tbxResult.Text = result.ToString();
                         break;
-                        
+
+                    case "*":
+
+                        result = number1*number2;
+                        tbxResult.Text = result.ToString();
+                        break;
+
+                    case "/":
+
+                        result = number1 / number2;
+                        tbxResult.Text = result.ToString();
+                        break;
+
                 }
 
             }
@@ -61,7 +75,7 @@ namespace Calculator
             {
                 MessageBox.Show("You need to introduce an actual number");
             }
-
+           
         }
 
         private void BtnResult_Click(object sender, RoutedEventArgs e)
@@ -72,7 +86,7 @@ namespace Calculator
 
         }
 
-        private void RadioPlus_CheckedChanged(object sender, RoutedEventArgs e)
+        private void RadioPlus_Checked(object sender, RoutedEventArgs e)
         {
             operation = "+";
 
@@ -81,6 +95,18 @@ namespace Calculator
         private void RadioMinus_Checked(object sender, RoutedEventArgs e)
         {
             operation = "-";
+        }
+
+        
+
+        private void radioMultiplication_Click(object sender, RoutedEventArgs e)
+        {
+            operation = "*";
+        }
+
+        private void Division(object sender, RoutedEventArgs e)
+        {
+            operation = "/";
         }
     }
 }
